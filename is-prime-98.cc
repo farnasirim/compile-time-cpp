@@ -8,7 +8,7 @@ struct IsPrime;
 // than d.
 template<int v, int d>
 struct HasDivisorGE {
-  static constexpr bool value = (d < v) &&
+  static const bool value = (d < v) &&
     ((v % d == 0) || HasDivisorGE<v, d + 1>::value);
 };
 
